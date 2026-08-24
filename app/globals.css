@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  --color-ink: #0b1f22;
+  --color-trail-deep: #0b5d5d;
+  --color-trail: #0f7a72;
+  --color-trail-light: #14a698;
+  --color-sun: #f2b705;
+  --color-sun-deep: #d99a00;
+  --color-coral: #ff6b5b;
+  --color-coral-deep: #e5503f;
+  --color-paper: #faf7f0;
+  --color-paper-dim: #f0ece1;
+  --color-mist: #eef5f3;
+  --color-line: #dfe6e2;
+
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-ink: var(--color-ink);
+  --color-trail-deep: var(--color-trail-deep);
+  --color-trail: var(--color-trail);
+  --color-trail-light: var(--color-trail-light);
+  --color-sun: var(--color-sun);
+  --color-sun-deep: var(--color-sun-deep);
+  --color-coral: var(--color-coral);
+  --color-coral-deep: var(--color-coral-deep);
+  --color-paper: var(--color-paper);
+  --color-paper-dim: var(--color-paper-dim);
+  --color-mist: var(--color-mist);
+  --color-line: var(--color-line);
+
+  --font-display: "Baloo 2", ui-rounded, "Segoe UI", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.btn-3d {
+  position: relative;
+  transition: transform 0.05s ease;
+  box-shadow: 0 4px 0 0 var(--btn-shadow, #0a4a4a);
+}
+.btn-3d:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 var(--btn-shadow, #0a4a4a);
+}
+.btn-3d:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@keyframes trail-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+.animate-trail-pulse {
+  animation: trail-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float-slow {
+  animation: float-slow 3.5s ease-in-out infinite;
+}
+
+::selection {
+  background: var(--color-sun);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-trail-pulse, .animate-float-slow {
+    animation: none;
+  }
+}
