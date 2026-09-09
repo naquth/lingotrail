@@ -1,135 +1,50 @@
-# LingoTrail
+# AxzyCreative — Static Portfolio Snapshot
 
-Platform belajar bahasa full-stack — jalur pembelajaran visual, sistem hearts/gems/streak, quiz interaktif, dan klasemen. Dibangun dengan Next.js, Neon Postgres (Drizzle ORM), dan NextAuth.
+Hasil ekstraksi dari file `.mht` (web archive) yang di-upload, siap deploy ke Vercel sebagai portofolio.
 
-> **Catatan desain**: Aplikasi ini terinspirasi dari konsep gamifikasi belajar bahasa populer (unit -> lesson -> quiz, hearts, XP, streak, leaderboard), tapi menggunakan identitas visual, nama, maskot, dan branding orisinal (LingoTrail / Compa). Ini bukan replika dari produk manapun -- logo, warna, dan aset pihak ketiga tidak digunakan.
+## Cara deploy ke Vercel
+1. Upload folder ini (isi `site/`) ke GitHub repo, ATAU
+2. Jalankan `vercel` / `vercel --prod` langsung dari dalam folder ini via Vercel CLI, ATAU
+3. Drag & drop folder ini ke dashboard Vercel (New Project → Deploy).
 
-## Stack
+Tidak perlu build step — ini murni HTML/CSS statis, root directory langsung berisi `index.html`.
 
-- Next.js 15 (App Router, Turbopack)
-- TypeScript + Tailwind CSS v4
-- Neon Postgres + Drizzle ORM
-- NextAuth v5 (credentials login)
-- Radix UI, Lucide Icons, canvas-confetti
+## Yang identik 100% dengan sumber
+- Struktur HTML lengkap (semua teks, heading, deskripsi produk, layout section)
+- CSS asli situs (134KB, file `assets/index-DiOmUwh_.css`) — byte-for-byte sama
+- Bootstrap Icons CSS + font (diambil dari paket npm resmi versi yang sama: 1.11.3)
+- Google Fonts (Figtree, Plus Jakarta Sans) via CSS asli yang tersimpan, font file tetap dimuat dari fonts.gstatic.com (CDN publik resmi)
+- 3 gambar produk (WebP) dan logo (SVG) — byte-for-byte sama, disalin dari file .mht
 
-## Setup lokal
+## Keterbatasan (perlu diketahui — tidak bisa 100% identik)
+File `.mht` adalah *snapshot* halaman setelah dirender browser ("Save Page As" di Chrome/Blink). Ini artinya:
 
-### 1. Install dependencies
+1. **Tidak ada interaktivitas JavaScript.** Situs asli adalah aplikasi React (terlihat dari referensi ke banyak file `.js` di HTML), tapi Blink tidak menyimpan source JS saat snapshot — hanya HTML hasil akhir render. Akibatnya:
+   - Menu mobile (hamburger), toggle tema, toggle bahasa **tidak berfungsi** (tombolnya ada secara visual, tapi tidak ada logic di baliknya)
+   - Animasi scroll/reveal (elemen sudah dalam state "visible" karena disimpan pasca-animasi, jadi tampil statis, bukan animasi berjalan)
+   - Bagian "Read more..." pada deskripsi produk tidak bisa expand/collapse
 
-```bash
-npm install
+2. **Hanya 1 halaman (beranda `/`).** Halaman lain yang direferensikan di menu (`/store`, `/updates`, `/sales`, `/contact`, `/company`, `/terms`, `/donate`) **tidak tersimpan** di file .mht — hanya linknya saja. Mengklik menu tersebut akan mengarah ke situs asli (axzyhub.com) karena link masih pakai URL absolut, atau 404 jika domain diubah.
+
+3. **Font "Moderniz" (custom/berlisensi)** yang dipakai di beberapa heading tidak tersimpan di file .mht dan tidak tersedia di sumber publik (npm/Google Fonts). CSS asli sudah punya fallback ke `"Arial Black", "Plus Jakarta Sans", Figtree, sans-serif` sehingga tampilan tetap sangat mendekati, hanya bentuk hurufnya sedikit berbeda dari aslinya.
+
+4. **favicon.svg** tidak tersimpan di file .mht — saya gunakan `AxzyLogo.svg` sebagai pengganti sementara.
+
+## Struktur folder
 ```
-
-### 2. Buat database Neon
-
-1. Daftar di neon.tech (gratis).
-2. Buat project baru -> salin connection string (format `postgresql://...`).
-
-### 3. Environment variables
-
-Salin `.env.example` menjadi `.env.local`, lalu isi:
-
-```bash
-cp .env.example .env.local
+site/
+├── index.html
+├── vercel.json
+├── assets/
+│   ├── index-DiOmUwh_.css       (CSS utama situs, asli)
+│   ├── bootstrap-icons.min.css
+│   ├── google-fonts.css
+│   └── fonts/
+│       ├── bootstrap-icons.woff2
+│       └── bootstrap-icons.woff
+└── images/
+    ├── AxzyLogo.svg
+    ├── thumb-1174927-card.webp
+    ├── thumb-1175260-full.webp
+    └── thumb-1179408-card.webp
 ```
-
-```env
-DATABASE_URL="postgresql://user:password@ep-xxxx.neon.tech/neondb?sslmode=require"
-AUTH_SECRET="hasil-dari-openssl-rand-base64-32"
-```
-
-Generate AUTH_SECRET:
-
-```bash
-openssl rand -base64 32
-```
-
-### 4. Buat tabel + isi data awal lewat SQL Editor Neon
-
-Cara paling gampang, tanpa perlu terminal:
-
-1. Buka project Neon kamu -> menu **SQL Editor**.
-2. Buka file `schema.sql` di root folder project ini.
-3. Copy seluruh isinya, paste ke SQL Editor Neon.
-4. Klik **Run**.
-
-File ini sudah berisi 11 tabel + data awal (6 bahasa, 3 unit, 6 lesson, 17 soal untuk Bahasa Inggris). Setelah run, database kamu langsung siap dipakai -- tidak perlu langkah `db:push` atau `db:seed` lagi.
-
-> Alternatif lewat terminal (kalau lebih suka Drizzle CLI): `npm run db:push` lalu `npm run db:seed`. Fungsinya sama persis dengan `schema.sql`, tinggal pilih salah satu.
-
-### 5. Jalankan dev server
-
-```bash
-npm run dev
-```
-
-Buka http://localhost:3000
-
-## Deploy ke Vercel
-
-### Opsi A -- lewat Vercel Dashboard (termudah)
-
-1. Push kode ini ke repo GitHub/GitLab.
-2. Buka vercel.com/new -> import repo.
-3. Di bagian Environment Variables, tambahkan:
-   - `DATABASE_URL` -- connection string Neon kamu
-   - `AUTH_SECRET` -- secret yang sama dari langkah lokal
-4. Klik Deploy.
-5. Kalau tabel di Neon belum dibuat sebelumnya (langkah 4 di atas), jalankan `schema.sql` lewat SQL Editor Neon dulu -- itu sudah termasuk seed data, jadi tidak perlu langkah tambahan setelah deploy.
-
-### Opsi B -- lewat Vercel CLI
-
-```bash
-npm install -g vercel
-vercel login
-vercel
-# ikuti prompt, lalu set env vars:
-vercel env add DATABASE_URL
-vercel env add AUTH_SECRET
-vercel --prod
-```
-
-## Struktur proyek
-
-```
-app/
-  (main)/           -> halaman dengan sidebar: learn, leaderboard, shop, profile, courses
-  lesson/            -> halaman quiz fullscreen
-  login/ register/   -> autentikasi
-  onboarding/        -> pilih bahasa pertama kali
-  api/               -> route handler (auth, register)
-actions/             -> server actions (progress, challenge, logout)
-db/
-  schema.ts          -> skema Drizzle lengkap
-  queries.ts         -> query reusable (cached)
-  drizzle.ts         -> koneksi Neon
-components/
-  ui/                -> Button, Progress (design system dasar)
-  layout/            -> Sidebar, mobile nav, stats bar
-  course/            -> trail path, lesson node, course card
-  lesson/            -> quiz engine, challenge card
-  shop/              -> refill hearts
-scripts/seed.ts       -> data awal (6 bahasa, 3 unit, 6 lesson, 17 soal)
-```
-
-## Fitur yang sudah jalan
-
-- [x] Register & login (credentials + bcrypt)
-- [x] Onboarding pilih bahasa (multi-bahasa, aktif: Bahasa Inggris)
-- [x] Trail path visual dengan node lesson zig-zag
-- [x] Quiz engine: pilihan ganda, feedback benar/salah, confetti
-- [x] Sistem hearts (berkurang saat salah, terisi ulang via gems)
-- [x] Sistem gems & poin (XP)
-- [x] Klasemen (leaderboard top 10 by poin)
-- [x] Toko (refill hearts)
-- [x] Profil user + ganti bahasa + logout
-- [x] Responsive (sidebar desktop, bottom nav mobile)
-
-## Yang bisa dikembangkan lanjut
-
-- Streak harian otomatis (cron/edge function untuk reset harian)
-- Audio pronunciation (TTS) untuk tipe soal LISTEN
-- Challenge tipe MATCH, TRANSLATE, FILL_BLANK (schema sudah siap, UI belum)
-- Sistem league mingguan (tabel leagues/leagueMembers sudah ada di schema)
-- Admin panel untuk kelola course/lesson/challenge
-- OAuth (Google/GitHub) selain credentials
