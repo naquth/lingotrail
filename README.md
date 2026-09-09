@@ -1,20 +1,21 @@
 # Naquth — Portfolio Landing Page
 
-Landing page portofolio dengan brand **Naquth**. Struktur, layout, motion, dan sistem warna (light + dark theme dengan toggle) dibangun mengikuti referensi UI/UX axzyhub.com secara persis — konten dan identitas visual sepenuhnya milik Naquth.
+Landing page portofolio dengan brand **Naquth**. Desain ini original — dibangun dari nol dengan sistem grid 12-kolom, monokrom hitam-putih, dan gaya editorial/teknis (bukan meniru layout situs manapun).
 
-## Layanan yang ditampilkan
-- Web Development
-- UI/UX Design
-- Graphic Design
+## Arah desain
+- **Layout**: grid 12-kolom eksplisit, rata kiri, garis pembatas (rule) sebagai elemen struktural utama — bukan card, shadow, atau bentuk melengkung
+- **Warna**: monokrom murni (hitam/putih/abu), tanpa aksen warna — kontras datang dari value, bukan hue
+- **Tipografi**: satu keluarga font (Inter), dibedakan lewat ukuran dan weight
+- **Layanan** ditampilkan sebagai daftar bernomor dengan deskripsi, bukan kartu
+- **Karya** ditampilkan sebagai daftar baris bernomor dengan meta dan tahun, bukan grid gambar
+- **Alur kerja** sebagai timeline horizontal dengan garis penghubung
+- **Motion**: reveal-on-scroll halus per section, tanpa efek melayang/glow/bubble
 
 ## Fitur
-- **Dua tema**: light (default, putih + aksen ungu pastel) dan dark (hitam + aksen putih), dengan tombol toggle di navbar — pilihan tersimpan di localStorage
-- **Navbar mengambang**: transparan lebar di posisi awal, menyusut jadi pill solid saat discroll
-- Animasi reveal per-karakter di headline hero
-- Reveal-on-scroll untuk semua section
-- Floating decorative chips di section layanan
-- Kartu produk dengan harga miring (price tag), mengikuti gaya kartu toko di referensi
-- Responsif penuh + menu mobile dengan hamburger toggle
+- Dua tema: **dark** (default, hitam pekat) dan **light** (putih), toggle di navbar, tersimpan di localStorage
+- Navbar sticky sederhana (bukan pill mengambang)
+- Reveal-on-scroll per section
+- Responsif penuh + menu mobile
 
 ## Cara deploy ke Vercel
 1. Upload folder ini ke GitHub repo, ATAU
@@ -25,25 +26,19 @@ Statis penuh (HTML/CSS/JS vanilla), tanpa build step. Root langsung berisi `inde
 
 ## Struktur
 ```
-naquth-site/
+naquth-v3/
 ├── index.html
 ├── vercel.json
 ├── assets/
 │   ├── style.css
 │   └── main.js
 └── images/
-    ├── naquth-logo.png        (logo putih, dipakai di dark mode)
-    ├── naquth-logo-dark.png   (logo gelap, dipakai di light mode / default)
+    ├── naquth-logo.png        (logo putih; di-invert via CSS filter otomatis untuk light mode)
     └── favicon-*.png
 ```
 
 ## Yang perlu diisi/disesuaikan sebelum publish
 - Email kontak masih placeholder: `hello@naquth.dev`
 - Link Discord & GitHub di footer masih `#`
-- 3 contoh portofolio (kartu produk) masih placeholder — ganti dengan proyek nyata, dan tambahkan gambar thumbnail asli (saat ini `.work-thumb` polos tanpa gambar — ganti `<div class="work-thumb">` jadi `<img class="work-thumb" src="...">` jika sudah ada gambarnya)
-- Font Space Grotesk + Plus Jakarta Sans dimuat dari Google Fonts (CDN publik) — pastikan koneksi internet tersedia saat live, tidak perlu self-host
-
-## Catatan desain
-- Logo otomatis berganti versi (dark↔light) mengikuti tema aktif lewat CSS `filter: invert()`
-- Palet: light mode putih dengan radial-glow ungu pastel; dark mode hitam pekat `rgb(5,5,5)` dengan glow putih halus — sama seperti referensi
-- Ikon pakai inline SVG (gaya lucide), tidak bergantung font-icon eksternal
+- 4 baris "Karya" masih data contoh — ganti dengan proyek nyata dan tahun sebenarnya
+- Font Inter dimuat dari Google Fonts (CDN publik) — pastikan koneksi internet tersedia saat live
