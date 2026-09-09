@@ -1,303 +1,89 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="id" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0a0a0a">
-  <meta name="description" content="Naquth — jasa Web Development, UI/UX Design, dan Graphic Design. Membangun produk digital yang rapi dan siap dipakai.">
-  <meta name="author" content="Naquth">
-  <title>Naquth — Web Development, UI/UX Design, Graphic Design</title>
-
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
-
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Naquth — Web Development, UI/UX Design, dan Graphic Design.">
+<title>Naquth — Digital Design & Development</title>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a href="#top" class="brand" aria-label="Naquth home">
-        <img src="images/naquth-logo.png" alt="Naquth">
-        <span>Naquth</span>
-      </a>
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#services">Layanan</a>
-        <a href="#work">Karya</a>
-        <a href="#approach">Pendekatan</a>
-        <a href="#contact">Kontak</a>
-      </nav>
-      <div class="header-actions">
-        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Ganti tema"></button>
-        <a href="#contact" class="cta-small">Mulai proyek</a>
-        <button type="button" class="menu-toggle" data-menu-toggle aria-label="Buka menu" aria-expanded="false">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="17" y2="17"></line></svg>
-        </button>
-      </div>
-    </div>
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <a href="#services">Layanan</a>
-      <a href="#work">Karya</a>
-      <a href="#approach">Pendekatan</a>
-      <a href="#contact">Kontak</a>
+<div class="grain"></div>
+<header class="header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#top"><img src="images/naquth-logo.png" alt="Naquth"><span>naquth<span class="brand-dot">.</span></span></a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#services">Layanan</a><a href="#work">Karya</a><a href="#process">Proses</a>
     </nav>
-  </header>
-
-  <main id="top">
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <aside class="hero-index">
-          <p class="hero-index-label">Lingkup Kerja</p>
-          <ul class="hero-index-list">
-            <li><span>Web Development</span><span class="n">01</span></li>
-            <li><span>UI/UX Design</span><span class="n">02</span></li>
-            <li><span>Graphic Design</span><span class="n">03</span></li>
-          </ul>
-        </aside>
-        <div class="hero-main">
-          <p class="hero-eyebrow"><span class="dot"></span>Terbuka untuk proyek baru</p>
-          <h1 class="hero-title">Produk digital yang <em>rapi secara desain, kokoh secara teknis.</em></h1>
-          <p class="hero-lede">
-            Naquth mengerjakan website, antarmuka aplikasi, dan identitas visual untuk individu, komunitas, dan bisnis kecil — dari susunan awal sampai hasil yang siap dipakai.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn-primary">
-              Diskusikan proyek Anda
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </a>
-            <a href="#work" class="btn-text">Lihat karya terdahulu</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- METRIC STRIP -->
-    <section class="metric-strip">
-      <div class="wrap">
-        <div class="metric-grid">
-          <div class="metric-cell">
-            <div class="metric-value">20+</div>
-            <div class="metric-label">Proyek selesai</div>
-          </div>
-          <div class="metric-cell">
-            <div class="metric-value">3</div>
-            <div class="metric-label">Bidang layanan</div>
-          </div>
-          <div class="metric-cell">
-            <div class="metric-value">&lt;24j</div>
-            <div class="metric-label">Waktu respons</div>
-          </div>
-          <div class="metric-cell">
-            <div class="metric-value">1:1</div>
-            <div class="metric-label">Kerja langsung, tanpa perantara</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">Layanan</p>
-          <h2>Tiga bidang kerja, satu standar yang sama untuk semuanya.</h2>
-        </div>
-
-        <div class="service-list reveal">
-          <div class="service-row">
-            <span class="service-num">01</span>
-            <span class="service-name">Web Development</span>
-            <p class="service-desc">Landing page, situs portofolio, dan aplikasi web — dari desain menjadi kode yang jalan, responsif di semua ukuran layar.</p>
-            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
-          </div>
-          <div class="service-row">
-            <span class="service-num">02</span>
-            <span class="service-name">UI/UX Design</span>
-            <p class="service-desc">Alur dan tampilan antarmuka yang mudah dipahami pengguna, dari wireframe sampai desain visual siap dikembangkan.</p>
-            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
-          </div>
-          <div class="service-row">
-            <span class="service-num">03</span>
-            <span class="service-name">Graphic Design</span>
-            <p class="service-desc">Logo, sosial media kit, dan materi promosi — aset visual pendukung brand yang konsisten dengan identitas produk.</p>
-            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WORK -->
-    <section id="work" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">Karya</p>
-          <h2>Sebagian pekerjaan yang pernah dikerjakan.</h2>
-        </div>
-
-        <div class="work-list reveal">
-          <div class="work-row">
-            <span class="work-num">01</span>
-            <span class="work-title">Landing Page Produk SaaS</span>
-            <span class="work-meta">Web Development — HTML, CSS, JS</span>
-            <span class="work-year">2026</span>
-          </div>
-          <div class="work-row">
-            <span class="work-num">02</span>
-            <span class="work-title">Desain Aplikasi Mobile Banking</span>
-            <span class="work-meta">UI/UX Design — Figma</span>
-            <span class="work-year">2026</span>
-          </div>
-          <div class="work-row">
-            <span class="work-num">03</span>
-            <span class="work-title">Brand Kit Komunitas Kreator</span>
-            <span class="work-meta">Graphic Design — Illustrator</span>
-            <span class="work-year">2025</span>
-          </div>
-          <div class="work-row">
-            <span class="work-num">04</span>
-            <span class="work-title">Sistem Desain untuk Startup Edukasi</span>
-            <span class="work-meta">UI/UX Design — Figma</span>
-            <span class="work-year">2025</span>
-          </div>
-        </div>
-        <a href="#contact" class="work-more">
-          Lihat semua karya
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </a>
-      </div>
-    </section>
-
-    <!-- APPROACH -->
-    <section id="approach" class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">Pendekatan</p>
-          <h2>Cara kerja di balik setiap hasil.</h2>
-        </div>
-
-        <div class="approach-grid reveal">
-          <div class="approach-copy">
-            <p>Setiap proyek disusun dengan standar yang sama: struktur jelas sebelum detail, kode yang mudah dirawat, dan komunikasi yang tidak berbelit selama prosesnya berjalan.</p>
-          </div>
-          <div class="approach-items">
-            <div class="approach-item">
-              <span class="idx">01</span>
-              <h3>Struktur dulu, baru detail</h3>
-              <p>Alur dan susunan konten ditentukan sebelum masuk ke tampilan visual.</p>
-            </div>
-            <div class="approach-item">
-              <span class="idx">02</span>
-              <h3>Kode yang bisa dirawat</h3>
-              <p>Struktur file dan komponen ditata agar mudah dikembangkan lebih jauh.</p>
-            </div>
-            <div class="approach-item">
-              <span class="idx">03</span>
-              <h3>Komunikasi langsung</h3>
-              <p>Update progres rutin, tanpa istilah teknis yang tidak perlu.</p>
-            </div>
-            <div class="approach-item">
-              <span class="idx">04</span>
-              <h3>Revisi sampai pas</h3>
-              <p>Penyesuaian dilakukan berdasarkan masukan sampai hasilnya sesuai.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS TIMELINE -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="label">Alur Kerja</p>
-          <h2>Dari brief awal sampai serah terima.</h2>
-        </div>
-        <div class="timeline reveal">
-          <div class="timeline-step">
-            <span class="idx">01 — Diskusi</span>
-            <h3>Kebutuhan &amp; referensi</h3>
-            <p>Ceritakan tujuan proyek, referensi, dan batasan yang ada agar arah kerja jelas sejak awal.</p>
-          </div>
-          <div class="timeline-step">
-            <span class="idx">02 — Proses</span>
-            <h3>Desain &amp; build</h3>
-            <p>Desain disusun lebih dulu, lalu dikembangkan menjadi kode atau aset final dengan update berkala.</p>
-          </div>
-          <div class="timeline-step">
-            <span class="idx">03 — Selesai</span>
-            <h3>Revisi &amp; serah terima</h3>
-            <p>Penyesuaian akhir berdasarkan masukan, lalu file dan sumber lengkap diserahkan ke Anda.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING CTA -->
-    <section id="contact" class="closing">
-      <div class="wrap closing-grid reveal">
-        <div class="closing-text">
-          <h2>Punya proyek yang ingin dikerjakan?</h2>
-          <p>Ceritakan kebutuhannya lewat email atau Discord — biasanya dibalas dalam waktu kurang dari 24 jam.</p>
-        </div>
-        <div class="closing-action">
-          <a href="mailto:hello@naquth.dev" class="btn-primary">
-            Kirim email
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
-          <a href="#" class="btn-text">Chat di Discord</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="images/naquth-logo.png" alt="Naquth">
-        <p>Naquth mengerjakan web development, UI/UX design, dan graphic design untuk produk digital yang rapi dan siap pakai.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigasi</h4>
-        <ul>
-          <li><a href="#top">Beranda</a></li>
-          <li><a href="#services">Layanan</a></li>
-          <li><a href="#work">Karya</a></li>
-          <li><a href="#approach">Pendekatan</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Layanan</h4>
-        <ul>
-          <li><a href="#services">Web Development</a></li>
-          <li><a href="#services">UI/UX Design</a></li>
-          <li><a href="#services">Graphic Design</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Kontak</h4>
-        <ul>
-          <li><a href="mailto:hello@naquth.dev">Email</a></li>
-          <li><a href="#">Discord</a></li>
-          <li><a href="#">GitHub</a></li>
-        </ul>
-      </div>
+    <div class="header-right">
+      <button class="theme" data-theme-toggle aria-label="Ganti tema"><span></span></button>
+      <a class="header-cta" href="#contact">Mulai proyek <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 4l4 4-4 4"/></svg></a>
+      <button class="menu" data-menu-toggle aria-label="Buka menu"><i></i><i></i></button>
     </div>
-    <div class="wrap footer-bottom">
-      <span>© 2026 Naquth. Seluruh hak dilindungi.</span>
-      <span>Dirancang &amp; dibangun oleh Naquth</span>
-    </div>
-  </footer>
+  </div>
+  <nav class="mobile-nav"><a href="#services">Layanan</a><a href="#work">Karya</a><a href="#process">Proses</a><a href="#contact">Kontak</a></nav>
+</header>
 
-  <script src="assets/main.js"></script>
-</body>
-</html>
+<main>
+<section class="hero">
+  <div class="hero-grid-line line-a"></div><div class="hero-grid-line line-b"></div>
+  <div class="hero-copy reveal">
+    <div class="eyebrow"><span class="status-dot"></span>Available for selected projects <span class="eyebrow-id">/ 2026</span></div>
+    <h1>Digital work<br>with <em>intent.</em></h1>
+    <p class="hero-lede">Saya merancang dan membangun website, interface, dan visual identity yang terasa jelas, cepat, dan punya karakter.</p>
+    <div class="hero-actions"><a class="button button-primary" href="#contact">Mulai percakapan <svg viewBox="0 0 18 18"><path d="M3 9h11M9.5 4.5 14 9l-4.5 4.5"/></svg></a><a class="text-link" href="#work">Lihat karya <span>↗</span></a></div>
+  </div>
+  <div class="hero-art reveal">
+    <div class="art-top"><span>NAQUTH / 01</span><span>SELECTED WORK</span></div>
+    <div class="art-canvas">
+      <div class="art-orbit orbit-1"></div><div class="art-orbit orbit-2"></div>
+      <div class="art-word">NQ</div>
+      <div class="art-card card-main"><span class="mini-label">DIGITAL PRODUCT</span><strong>Less noise.<br>More signal.</strong><span class="card-arrow">↗</span></div>
+      <div class="art-card card-small"><span>01</span><b>WEB</b><small>DEVELOPMENT</small></div>
+      <div class="art-coordinate">07°48′S<br>112°00′E</div>
+    </div>
+    <div class="art-bottom"><span>DESIGN / CODE / IDENTITY</span><span>SCROLL ↓</span></div>
+  </div>
+</section>
+
+<section class="marquee" aria-label="Keahlian"><div class="marquee-track"><span>WEB DEVELOPMENT</span><b>✦</b><span>UI / UX DESIGN</span><b>✦</b><span>GRAPHIC DESIGN</span><b>✦</b><span>WEB DEVELOPMENT</span><b>✦</b><span>UI / UX DESIGN</span><b>✦</b><span>GRAPHIC DESIGN</span><b>✦</b></div></section>
+
+<section class="section services" id="services">
+  <div class="section-kicker"><span>01</span><span>Capabilities</span></div>
+  <div class="section-intro"><p class="micro">WHAT I DO</p><h2>Satu sistem visual,<br><i>dibangun sampai selesai.</i></h2><p class="intro-copy">Bukan sekadar membuat sesuatu terlihat bagus. Setiap bagian dirancang supaya bekerja sebagai satu kesatuan — dari struktur, interaksi, sampai detail terakhir.</p></div>
+  <div class="service-grid">
+    <article class="service"><div class="service-no">01</div><div class="service-icon">↗</div><h3>Web<br>Development</h3><p>Landing page, portfolio, dan web app yang cepat, responsive, dan mudah dikembangkan.</p><div class="service-foot"><span>HTML / CSS / JS</span><span>01</span></div></article>
+    <article class="service service-feature"><div class="service-no">02</div><div class="service-icon">⌁</div><h3>UI / UX<br>Design</h3><p>Interface yang punya hierarchy jelas dan terasa natural saat digunakan.</p><div class="service-foot"><span>FIGMA / SYSTEMS</span><span>02</span></div></article>
+    <article class="service"><div class="service-no">03</div><div class="service-icon">✦</div><h3>Graphic<br>Design</h3><p>Logo, social assets, dan visual kit yang menjaga brand tetap konsisten.</p><div class="service-foot"><span>IDENTITY / VISUAL</span><span>03</span></div></article>
+  </div>
+</section>
+
+<section class="section work" id="work">
+  <div class="section-kicker"><span>02</span><span>Selected work</span></div>
+  <div class="work-head"><h2>Beberapa hal yang<br><i>pernah dibuat.</i></h2><a class="text-link" href="#contact">Request full archive <span>↗</span></a></div>
+  <div class="projects">
+    <article class="project project-dark"><div class="project-preview preview-saas"><div class="preview-bar"><span></span><span></span><span></span></div><div class="preview-ui"><div class="preview-side"></div><div class="preview-content"><small>ANALYTICS</small><strong>48,290</strong><div class="chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div><div class="project-info"><div><span class="project-index">01 / WEB</span><h3>SaaS Landing Page</h3></div><span class="project-year">2026</span></div></article>
+    <article class="project"><div class="project-preview preview-bank"><div class="bank-top">NQ BANK <span>•••</span></div><strong>Rp 24.850.000</strong><div class="bank-line"></div><div class="bank-meta"><span>VISA</span><span>08 / 29</span></div></div><div class="project-info"><div><span class="project-index">02 / UI·UX</span><h3>Mobile Banking Concept</h3></div><span class="project-year">2026</span></div></article>
+    <article class="project"><div class="project-preview preview-brand"><div class="brand-mark">N</div><div class="brand-word">NORTH<br><span>CREATIVE CLUB</span></div><div class="brand-rule"></div><small>IDENTITY SYSTEM / 25</small></div><div class="project-info"><div><span class="project-index">03 / IDENTITY</span><h3>Creator Community Kit</h3></div><span class="project-year">2025</span></div></article>
+    <article class="project project-offset"><div class="project-preview preview-edu"><span class="edu-label">LEARN / BUILD / SHIP</span><strong>Make complex<br><i>feel simple.</i></strong><div class="edu-number">04</div></div><div class="project-info"><div><span class="project-index">04 / UI·UX</span><h3>Education Design System</h3></div><span class="project-year">2025</span></div></article>
+  </div>
+</section>
+
+<section class="statement"><div class="statement-inner"><span class="quote-mark">“</span><blockquote>Good design is not decoration.<br>It is <em>clarity with character.</em></blockquote><div class="statement-meta"><span>NAQUTH — INDEPENDENT DESIGN & DEVELOPMENT</span><span>03 / PHILOSOPHY</span></div></div></section>
+
+<section class="section process" id="process">
+  <div class="section-kicker"><span>03</span><span>Process</span></div>
+  <div class="process-grid"><div><h2>Simple process.<br><i>Serious output.</i></h2><p>Tidak ada proses yang dibuat rumit hanya agar terlihat profesional. Brief jelas, keputusan cepat, dan progress yang bisa dilihat.</p></div><div class="steps"><div class="step"><span>01</span><div><h3>Direction</h3><p>Tujuan, referensi, scope, dan prioritas disepakati sebelum mulai.</p></div></div><div class="step"><span>02</span><div><h3>Design / Build</h3><p>Struktur dan visual dikerjakan, lalu diuji di layar nyata.</p></div></div><div class="step"><span>03</span><div><h3>Refine</h3><p>Detail, responsive behavior, dan polish diselesaikan berdasarkan feedback.</p></div></div><div class="step"><span>04</span><div><h3>Ship</h3><p>File final, source, dan handoff diserahkan dalam kondisi siap dipakai.</p></div></div></div></div>
+</section>
+
+<section class="contact" id="contact"><div class="contact-grid"><div><span class="micro">LET'S MAKE SOMETHING</span><h2>Ada ide?<br><i>Mari wujudkan.</i></h2></div><div class="contact-side"><p>Ceritakan apa yang sedang kamu bangun. Saya akan membalas secepatnya dengan arah yang jelas untuk langkah berikutnya.</p><a class="button button-light" href="mailto:hello@naquth.dev">hello@naquth.dev <svg viewBox="0 0 18 18"><path d="M3 9h11M9.5 4.5 14 9l-4.5 4.5"/></svg></a><a class="contact-discord" href="#">Atau chat lewat Discord ↗</a></div></div></section>
+</main>
+<footer class="footer"><div class="footer-main"><a class="brand" href="#top"><img src="images/naquth-logo.png" alt="Naquth"><span>naquth<span class="brand-dot">.</span></span></a><p>Web development, UI/UX, dan visual identity — dibuat dengan perhatian pada detail.</p><div class="footer-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#contact">Contact</a></div></div><div class="footer-bottom"><span>© 2026 Naquth</span><span>Designed & built independently</span><span>Back to top ↑</span></div></footer>
+<script src="assets/main.js"></script>
+</body></html>
