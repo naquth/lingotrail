@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0a0a0f">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Naquth — portofolio jasa Web Development, UI/UX Design, dan Graphic Design. Membangun produk digital yang rapi, cepat, dan enak dipakai.">
   <meta name="author" content="Naquth">
   <title>Naquth | Web Development, UI/UX Design, Graphic Design</title>
@@ -14,265 +14,248 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <div id="root">
+  <main class="landing-main">
 
-  <header class="site-header">
-    <div class="navbar-shell">
-      <a href="#top" class="navbar-brand" aria-label="Naquth home">
-        <img src="images/naquth-logo.png" alt="Naquth">
-      </a>
-      <nav class="navbar-links" aria-label="Primary navigation">
-        <a href="#services">Layanan</a>
-        <a href="#work">Portofolio</a>
-        <a href="#expertise">Keahlian</a>
-        <a href="#contact">Kontak</a>
-      </nav>
-      <div class="navbar-actions">
-        <button type="button" class="icon-btn" data-menu-toggle aria-label="Buka menu" aria-expanded="false">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-        </button>
-      </div>
-    </div>
-    <nav class="navbar-mobile-menu" aria-label="Mobile navigation">
-      <a href="#services">Layanan</a>
-      <a href="#work">Portofolio</a>
-      <a href="#expertise">Keahlian</a>
-      <a href="#contact">Kontak</a>
-    </nav>
-  </header>
+    <section id="home">
+      <div class="page-grid-bg"></div>
+      <div class="hero-cells" data-hero-cells aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-fade-bottom" aria-hidden="true"></div>
 
-  <main>
-
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="bg-grid"></div>
-      <div class="bg-glow" aria-hidden="true"></div>
-      <div class="bg-fade-bottom"></div>
+      <header class="site-header">
+        <div class="navbar-shell" data-navbar-shell>
+          <a href="#home" class="navbar-brand" aria-label="Naquth home">
+            <img src="images/naquth-logo-dark.png" alt="Naquth">
+          </a>
+          <nav class="navbar-links" aria-label="Primary navigation">
+            <a href="#home">Home</a>
+            <a href="#work">Store</a>
+            <a href="#tools">Layanan</a>
+            <a href="#contact">Kontak</a>
+          </nav>
+          <div class="navbar-actions">
+            <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme" aria-pressed="true"></button>
+            <button type="button" class="menu-toggle" data-menu-toggle aria-label="Buka menu" aria-expanded="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+          </div>
+        </div>
+        <nav class="navbar-mobile-menu" aria-label="Mobile navigation">
+          <a href="#home">Home</a>
+          <a href="#work">Store</a>
+          <a href="#tools">Layanan</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+      </header>
 
       <div class="hero-inner">
-        <span class="status-pill">Terbuka untuk proyek baru</span>
+        <span class="availability-badge">Terbuka untuk Proyek</span>
         <h1 class="hero-title">
-          <span data-split-chars>Bangun Produk</span>
-          <span class="accent" data-split-chars>Digital Anda</span>
+          <span class="hero-title-line" data-split-chars>Wujudkan Ide</span>
+          <span class="hero-title-line hero-title-accent" data-split-chars>Digital Anda</span>
         </h1>
         <p class="hero-lede">
-          Naquth membantu membangun website, tampilan aplikasi, dan aset visual yang rapi secara desain dan solid secara teknis — dari ide awal sampai siap dipakai.
+          Baik Anda sedang membangun website, merancang antarmuka aplikasi, atau membutuhkan identitas visual untuk brand — Naquth membantu mewujudkannya dengan Web Development, UI/UX Design, dan Graphic Design yang disesuaikan dengan kebutuhan Anda.
         </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Mulai proyek</a>
-          <a href="#work" class="btn btn-ghost">Lihat portofolio</a>
-        </div>
-        <div class="hero-stats">
+        <div class="hero-stats-pill">
           <span class="hero-stat">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
-            Desain &amp; kode custom
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+            20+
+          </span>
+          <span class="hero-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            5.0
           </span>
           <span class="hero-stat">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             Respons cepat
           </span>
-          <span class="hero-stat">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-            Revisi sampai pas
-          </span>
+          <a href="#contact" class="hero-cta">Mulai Proyek</a>
         </div>
       </div>
     </section>
 
-    <!-- VALUE STRIP -->
     <section class="value-strip">
       <div class="value-grid">
-        <article class="value-card reveal">
-          <span class="num">01</span>
-          <h3>Desain lebih dulu</h3>
-          <p>Setiap proyek dimulai dari struktur dan alur, bukan langsung tempel komponen.</p>
+        <article class="value-card value-card-1 reveal">
+          <h2 class="value-title">KUALITAS
+TINGGI</h2>
+          <div class="ship-bubble">Desain yang rapi &amp; presisi</div>
         </article>
-        <article class="value-card reveal">
-          <span class="num">02</span>
-          <h3>Kode yang rapi</h3>
-          <p>Struktur file jelas, mudah dirawat, dan siap dikembangkan lebih jauh.</p>
+        <article class="value-card value-card-2 reveal">
+          <h2 class="value-title">TEPAT
+WAKTU</h2>
+          <div class="ship-bubble">20+ proyek selesai</div>
         </article>
-        <article class="value-card reveal">
-          <span class="num">03</span>
-          <h3>Komunikasi jelas</h3>
-          <p>Update progres rutin, tanpa istilah teknis yang membingungkan.</p>
+        <article class="value-card value-card-3 reveal">
+          <h2 class="value-title">SIAP
+DIPAKAI</h2>
+          <div class="ship-bubble">Dari desain ke kode</div>
         </article>
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services" class="services">
       <div class="services-grid">
-        <div>
-          <p class="eyebrow reveal">Layanan</p>
-          <div class="service-words">
-            <span class="service-line reveal">Web <span class="hi">Development</span></span>
-            <span class="service-line reveal">UI/UX <span class="hi">Design</span></span>
-            <span class="service-line reveal">Graphic <span class="hi">Design</span></span>
+        <div class="services-left">
+          <p class="eyebrow reveal">Layanan Kami</p>
+          <div>
+            <span class="service-line heading-gradient reveal"><span class="service-word">Web</span><span class="service-word">Development</span></span>
+            <span class="service-line heading-gradient reveal"><span class="service-word">UI/UX</span><span class="service-word">Design</span></span>
+            <span class="service-line heading-gradient reveal"><span class="service-word">Graphic</span><span class="service-word">Design</span></span>
           </div>
+          <span class="float-chip chip-a" aria-hidden="true"></span>
+          <span class="float-chip chip-b" aria-hidden="true"></span>
+          <span class="float-chip chip-c" aria-hidden="true"></span>
+          <span class="float-chip chip-d" aria-hidden="true"></span>
+          <span class="float-chip chip-e" aria-hidden="true"></span>
+          <span class="float-chip chip-f" aria-hidden="true"></span>
+          <span class="float-chip chip-g" aria-hidden="true"></span>
+          <span class="float-chip chip-h" aria-hidden="true"></span>
         </div>
-        <div class="services-copy">
-          <span class="badge reveal">Apa yang saya kerjakan</span>
-          <h2 class="reveal">Tiga layanan, satu alur kerja yang sama</h2>
-          <p class="reveal">
-            <strong>Web Development</strong> — membangun landing page, situs portofolio, dan aplikasi web dari desain menjadi kode yang jalan, responsif di semua ukuran layar.
-          </p>
-          <p class="reveal">
-            <strong>UI/UX Design</strong> — merancang alur dan tampilan antarmuka yang mudah dipahami pengguna, dari wireframe sampai desain visual siap pakai.
-          </p>
-          <p class="reveal">
-            <strong>Graphic Design</strong> — aset visual pendukung brand: logo, sosial media kit, dan materi promosi yang konsisten dengan identitas produk.
-          </p>
+        <div class="services-right">
+          <span class="service-status-badge availability-badge reveal">Apa yang Saya Kerjakan</span>
+          <h2 class="heading-gradient reveal">Solusi kreatif untuk<br><span>kebutuhan <strong class="creator-gradient">digital.</strong></span></h2>
+          <p class="reveal">Naquth fokus pada web development, UI/UX design, dan graphic design. Membantu individu, komunitas, dan bisnis mengubah ide menjadi produk digital yang fungsional dan enak dilihat.</p>
+          <p class="reveal">Desain yang baik lebih dari sekadar tampilan. Sekuat apa pun sebuah sistem, tanpa antarmuka yang bersih dan intuitif, ia akan terasa biasa saja. Karena itu saya fokus membangun solusi yang menarik secara visual sekaligus sangat fungsional.</p>
         </div>
       </div>
     </section>
 
-    <!-- WORK / PORTFOLIO -->
     <section id="work" class="work">
       <div class="section-head reveal">
-        <h2>Contoh Pekerjaan</h2>
-        <p>Sebagian proyek yang pernah dikerjakan</p>
+        <h2 class="heading-gradient">Karya Terbaik</h2>
+        <p>Beberapa hasil kerja yang paling banyak diminati</p>
       </div>
       <div class="work-grid">
         <article class="work-card reveal">
-          <div class="work-thumb">
-            <span class="tag">Web Development</span>
-            <svg class="work-thumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 9h20"></path><circle cx="5.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="8" cy="6.5" r=".5" fill="currentColor"></circle></svg>
-          </div>
+          <span class="work-price">Rp 750rb</span>
+          <div class="work-thumb" role="img" aria-label="Landing page produk SaaS"></div>
           <div class="work-body">
             <h3>Landing Page Produk SaaS</h3>
-            <p>Situs pemasaran satu halaman dengan animasi scroll ringan dan waktu muat cepat.</p>
-            <div class="meta">
-              <span class="stack">HTML · CSS · JS</span>
-              <span>2026</span>
+            <p>Situs pemasaran satu halaman dengan animasi scroll ringan, struktur konten jelas, dan waktu muat cepat. Dibangun responsif untuk semua ukuran layar dengan fokus pada konversi.</p>
+            <div class="work-meta">
+              <span class="work-tag">HTML · CSS · JS</span>
+              <a href="#contact" class="work-link">Detail</a>
             </div>
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-thumb">
-            <span class="tag">UI/UX Design</span>
-            <svg class="work-thumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg>
-          </div>
+          <span class="work-price">Rp 1.2jt</span>
+          <div class="work-thumb" role="img" aria-label="Desain aplikasi mobile banking"></div>
           <div class="work-body">
             <h3>Desain Aplikasi Mobile Banking</h3>
-            <p>Alur onboarding dan dashboard transaksi yang disederhanakan dari riset pengguna.</p>
-            <div class="meta">
-              <span class="stack">Figma</span>
-              <span>2026</span>
+            <p>Alur onboarding dan dashboard transaksi yang disederhanakan berdasarkan riset pengguna. Sistem desain lengkap dengan komponen siap pakai untuk tim pengembang.</p>
+            <div class="work-meta">
+              <span class="work-tag">Figma</span>
+              <a href="#contact" class="work-link">Detail</a>
             </div>
           </div>
         </article>
         <article class="work-card reveal">
-          <div class="work-thumb">
-            <span class="tag">Graphic Design</span>
-            <svg class="work-thumb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
-          </div>
+          <span class="work-price">Rp 500rb</span>
+          <div class="work-thumb" role="img" aria-label="Brand kit komunitas kreator"></div>
           <div class="work-body">
             <h3>Brand Kit Komunitas Kreator</h3>
-            <p>Logo, palet warna, dan template sosial media untuk komunitas 5.000+ anggota.</p>
-            <div class="meta">
-              <span class="stack">Illustrator</span>
-              <span>2025</span>
+            <p>Logo, palet warna, dan template media sosial untuk komunitas dengan 5.000+ anggota. Termasuk panduan penggunaan agar konsisten di semua platform.</p>
+            <div class="work-meta">
+              <span class="work-tag">Illustrator</span>
+              <a href="#contact" class="work-link">Detail</a>
             </div>
           </div>
         </article>
       </div>
+      <a href="#contact" class="work-more">Lihat semua karya
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
     </section>
 
-    <!-- EXPERTISE -->
-    <section id="expertise" class="expertise">
+    <section id="tools" class="expertise">
       <div class="expertise-grid">
         <div class="expertise-copy">
-          <span class="tagline reveal">Cara kerja</span>
-          <h2 class="reveal">Alat dan kebiasaan di balik setiap proyek.</h2>
-          <p class="reveal">Dari perencanaan struktur sampai detail terakhir sebelum rilis, setiap tahap punya standar yang sama: jelas, rapi, dan mudah dirawat ke depannya.</p>
+          <span class="expertise-tag reveal">Alur Kerja</span>
+          <h2 class="heading-gradient reveal">Alat dan sistem di balik setiap hasil yang rapi.</h2>
+          <p class="reveal">Dari arah desain hingga struktur kode dan perencanaan proyek, setiap pekerjaan disusun agar tetap bersih, berguna, dan mudah dikembangkan.</p>
         </div>
         <div class="tool-grid">
           <article class="tool-card reveal">
             <div class="tool-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
             </div>
             <h3>Arah Desain</h3>
-            <p>Sistem warna, tipografi, dan layout ditentukan di awal agar konsisten di semua halaman.</p>
+            <p>Gaya visual, layout, dan keputusan branding dirancang agar setiap proyek terasa konsisten.</p>
           </article>
           <article class="tool-card reveal">
             <div class="tool-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
             </div>
-            <h3>Kode yang Bersih</h3>
-            <p>Struktur komponen jelas, performa diperhatikan, dan mudah dikembangkan lagi nanti.</p>
+            <h3>Alur Pengembangan</h3>
+            <p>Struktur kode, logika UI, dan perencanaan sistem disiapkan dengan struktur yang bersih.</p>
           </article>
           <article class="tool-card reveal">
             <div class="tool-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg>
             </div>
             <h3>Struktur Proyek</h3>
-            <p>File dan folder ditata dari awal supaya perubahan di kemudian hari tidak berantakan.</p>
+            <p>File yang terorganisir dan bagian yang terencana agar pembaruan ke depan tetap sederhana.</p>
           </article>
           <article class="tool-card featured reveal">
             <div class="tool-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
             </div>
             <h3>Fokus Kualitas</h3>
-            <p>Setiap detail dicek ulang sebelum diserahkan, supaya hasil akhirnya terasa matang dan siap pakai.</p>
+            <p>Setiap detail ditinjau ulang agar hasil akhir terasa matang, mudah dipakai, dan berkesan.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS + CTA -->
-    <section class="process">
+    <section id="contact" class="process">
       <div class="section-head reveal">
-        <h2>Siap Mulai Proyek?</h2>
-        <p>Begini alurnya dari brief awal sampai serah terima</p>
+        <h2 class="heading-gradient">Siap Membangun Sesuatu yang Rapi?</h2>
+        <p>Pilih jalur layanan dan bawa proyek Anda dari ide kasar menjadi hasil yang matang.</p>
       </div>
       <div class="process-grid">
         <article class="process-card reveal">
           <span class="step">01</span>
-          <h3>Diskusi Kebutuhan</h3>
-          <p>Ceritakan tujuan proyek, referensi, dan batasan yang ada agar arah kerja jelas sejak awal.</p>
+          <h3>Diskusi Desain</h3>
+          <p>Kirim referensi, tujuan proyek, dan alur yang diinginkan agar arah visual jelas sejak awal.</p>
         </article>
         <article class="process-card reveal">
           <span class="step">02</span>
-          <h3>Desain &amp; Build</h3>
-          <p>Desain disusun lebih dulu, lalu dikembangkan jadi kode atau aset final dengan update berkala.</p>
+          <h3>Pembuatan Aset</h3>
+          <p>Layout, grafis, dan kode dibentuk menjadi aset proyek yang bersih dan bisa dipakai ulang.</p>
         </article>
         <article class="process-card reveal">
           <span class="step">03</span>
-          <h3>Revisi &amp; Serah Terima</h3>
-          <p>Penyesuaian akhir berdasarkan masukan, lalu file dan sumber lengkap diserahkan ke Anda.</p>
+          <h3>Serah Terima</h3>
+          <p>Terima file final yang sudah rapi, terorganisir, dan siap digunakan sepenuhnya.</p>
         </article>
-      </div>
-
-      <div class="cta-final reveal" id="contact">
-        <h2>Punya proyek yang ingin dikerjakan?</h2>
-        <p>Ceritakan kebutuhannya lewat email atau Discord — biasanya dibalas dalam 1x24 jam.</p>
-        <div class="hero-actions">
-          <a href="mailto:hello@naquth.dev" class="btn btn-primary">Kirim email</a>
-          <a href="#" class="btn btn-ghost">Chat di Discord</a>
-        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
+    <div class="footer-divider"></div>
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/naquth-logo.png" alt="Naquth">
-        <p>Naquth mengerjakan web development, UI/UX design, dan graphic design untuk produk digital yang rapi dan siap pakai.</p>
+        <img src="images/naquth-logo-dark.png" alt="Naquth">
+        <p>Baik Anda sedang membangun website, merancang antarmuka, atau membangun sebuah brand, Naquth mengubah ide kasar menjadi UI, kode, dan sistem visual yang rapi.</p>
       </div>
       <div class="footer-col">
         <h3>Navigasi</h3>
         <ul>
-          <li><a href="#top">Beranda</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#services">Layanan</a></li>
-          <li><a href="#work">Portofolio</a></li>
-          <li><a href="#expertise">Keahlian</a></li>
+          <li><a href="#work">Karya</a></li>
+          <li><a href="#tools">Alur Kerja</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -284,14 +267,8 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h3>Kontak</h3>
+        <h3>Sosial</h3>
         <ul>
-          <li>
-            <a href="mailto:hello@naquth.dev">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
-              Email
-            </a>
-          </li>
           <li>
             <a href="#">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="7"></circle><circle cx="15" cy="12" r="7"></circle></svg>
@@ -304,14 +281,24 @@
               GitHub
             </a>
           </li>
+          <li>
+            <a href="mailto:hello@naquth.dev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+              Email
+            </a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Naquth. All rights reserved.</span>
-      <span class="footer-badge">Made with care by Naquth</span>
+      <span>2026 NAQUTH. All rights reserved.</span>
+      <a href="#home" class="powered-card">
+        <span>Made by</span>
+        <strong>Naquth</strong>
+      </a>
     </div>
   </footer>
+  </div>
 
   <script src="assets/main.js"></script>
 </body>
